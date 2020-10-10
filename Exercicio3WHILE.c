@@ -7,36 +7,31 @@ resultado.*/
 
 int main(void)
 {
-	int n, i = 2, primo = 1;
+	int n, i = 0, primo = 0;
 
 	setlocale(LC_ALL, "Portuguese");
 	system("color 17");
-	
+
 	printf("Digite o valor de N:  ");
 	scanf_s("%i", &n);
 
-	if (n <= 1) 
+	while (i <= n)
 	{
-		primo = 0;
-	}
-
-	while (primo == 1 && i <= n / 2) 
-	{
-		if (n % i == 0) 
-		{
-			primo = 0;
-		}
 		i++;
+		if (n % i == 0)
+		{
+			primo ++;
+		}						
 	}
 
-	if (primo == 1) 
+	if (primo == 2)
 	{
 		printf("%i é um número primo\n", n);
 	}
-	else 
+	else
 	{
-		printf("%i não é um número primo\n\n",n);
+		printf("%i não é um número primo\n\n", n);
 	}
-	
+
 	system("pause");
 }
