@@ -1,11 +1,11 @@
-/*Ler um número inteiro n.Decidir se n é um número primo e apresente o
+/*Ler um nÃºmero inteiro n.Decidir se n Ã© um nÃºmero primo e apresente o
 resultado.*/
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
-int main()
+int main(void)
 {
 	int n, i = 2, primo = 1;
 
@@ -26,16 +26,16 @@ int main()
 		{
 			primo = 0;
 		}
-		i = i + 1;
+		i++;
 	}
 
 	if (primo == 1) 
 	{
-		printf("%i é um número primo\n", n);
+		printf("%i Ã© um nÃºmero primo\n", n);
 	}
 	else 
 	{
-		printf("%i não é um número primo\n\n",n);
+		printf("%i nÃ£o Ã© um nÃºmero primo\n\n",n);
 	}
 	
 	system("pause");
