@@ -5,7 +5,6 @@ ou depósito o valor do saldo deve ser atualizado.*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-
 int main()
 {
 	int escolha;
@@ -31,7 +30,7 @@ int main()
 		{
 			printf("\nDigite o valor do saque:  ");
 			scanf_s("%f", &saque);
-			if (saldo <= 0) 
+			if ((saldo - saque) <= 0)
 			{
 				printf("Você não possui saldo");
 			}
@@ -51,7 +50,7 @@ int main()
 			saldo = saldo + deposito;
 			printf("Seu saldo é %.2f reais", saldo);
 		}
-		
+		printf("\n===============================================================================================");
 		printf("\n\nDigite o que quer fazer: (1)Consulta saldo, (2)saque, (3)depósito, (4)sair:  ");
 		scanf_s("%i", &escolha);
 	} 
