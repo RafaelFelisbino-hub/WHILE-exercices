@@ -1,3 +1,7 @@
+/*Escreva um algoritmo que apresente quatro op√ß√µes (a) consulta saldo, (b)
+saque, (c) dep√≥sito e (d) sair. O saldo deve iniciar em R$ 0,00. A cada saque
+ou dep√≥sito o valor do saldo deve ser atualizado.*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -10,7 +14,7 @@ int main()
 	setlocale(LC_ALL, "Portuguese");
 	system("color 17");
 
-	printf("Digite o que quer fazer: (1)Consulta saldo, (2)saque, (3)depÛsito, (4)sair:  ");
+	printf("Digite o que quer fazer: (1)Consulta saldo, (2)saque, (3)dep√≥sito, (4)sair:  ");
 	scanf_s("%i", &escolha);
 
 	while (escolha != 4)
@@ -19,7 +23,7 @@ int main()
 		if (escolha == 1)
 		{
 
-			printf("\nSeu saldo È:  %.2f", saldo);
+			printf("\nSeu saldo √©:  %.2f", saldo);
 
 		}
 	
@@ -29,12 +33,12 @@ int main()
 			scanf_s("%f", &saque);
 			if (saldo <= 0) 
 			{
-				printf("VocÍ n„o possui saldo");
+				printf("Voc√™ n√£o possui saldo");
 			}
 			else
 			{
 				saldo = saldo - saque;
-				printf("\nSeu saldo È:  %.2f", saldo);
+				printf("\nSeu saldo √©:  %.2f", saldo);
 			}
 			
 		}
@@ -45,10 +49,10 @@ int main()
 			scanf_s("%f", &deposito);
 
 			saldo = saldo + deposito;
-			printf("Seu saldo È %.2f reais", saldo);
+			printf("Seu saldo √© %.2f reais", saldo);
 		}
 		
-		printf("\n\nDigite o que quer fazer: (1)Consulta saldo, (2)saque, (3)depÛsito, (4)sair:  ");
+		printf("\n\nDigite o que quer fazer: (1)Consulta saldo, (2)saque, (3)dep√≥sito, (4)sair:  ");
 		scanf_s("%i", &escolha);
 	} 
 	system("pause");
